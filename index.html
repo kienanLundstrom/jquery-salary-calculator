@@ -12,23 +12,29 @@
 <header><h1>Salary Calculator</h1></header>
 <body>
 <div class='addEmployeeBox'>
-    <h4>Add Employee</h4>
-    <input type='text' id='firstName' placeholder="First name"/>
-    <input type='text' id='lastName' placeholder="Last name"/>
-    <input type='text' id='employeeId' placeholder="ID"/>
-    <input type='text' id='employeeTitle' placeholder="Title"/>
-    <input type='text' id='annualSalary' placeholder="Annual Salary"/>
-    <button id='submit'>Submit</button>
+    <h3>Add Employee</h3>
+        <p>
+            <input type='text' id='firstNameInput' placeholder="First name"/>
+            <input type='text' id='lastNameInput' placeholder="Last name"/>
+            <input type='text' id='employeeIdInput' placeholder="ID"/>
+            <input type='text' id='employeeTitleInput' placeholder="Title"/>
+            <input type='number' id='annualSalaryInput' placeholder="Annual Salary"/>
+            <button id='submitButton'>Submit</button>
+        </p>
 </div> 
 <div class='employeeTable'>
-    <tr>
-            <th class='fName'>First Name</th>
-            <th class='lName'>Last Name</th> 
-            <th class='tableId'>ID</th>
-            <th class='tableTitle'>Title</th>
-            <th class='AnnualTable'>Annual Salary</th>
-            <th class='deleteTable'>Delete</th>
-    <tr>
+    <h3>Employees Table</h3>
+        <table id='employeesOutput'>
+            <tr>
+                <th id='fName'>First Name</th>
+                <th id='lName'>Last Name</th> 
+                <th id='tableId'>ID</th>
+                <th id='tableTitle'>Title</th>
+                <th id='AnnualTable'>Annual Salary</th>
+                <th id='deleteTable'>Delete</th>
+            </tr>        
+        </table>
+    <h3 id='totalMonthlyOutput'>Total Monthly Out</h3>
 </div> 
 </body>
 </html>
