@@ -12,22 +12,20 @@ function Employee( firstName, lastName, iD, title, annualSalary){
 
 function newEmployeeInput(){
     let newEmployeeIn = new Employee(
-      $('#firsNameInput').val(),
+      $('#firstNameInput').val(),
       $('#lastNameInput').val(),
       $('#employeeIdInput').val(), 
       $('#employeeTitleInput').val(), 
       $('#annualSalaryInput').val())
-    newEmployees.push( newEmployeeInput );
+    newEmployees.push( newEmployeeIn );
+      $('#firstNameInput').val('');
+      $('#lastNameInput').val('');
+      $('#employeeIdInput').val('');
+      $('#employeeTitleInput').val('');
+      $('#annualSalaryInput').val('');
 }
-function emptyInput(){
-    $('#firsNameInput').empty();
-    $('#lastNameInput').empty();
-    $('#employeeIdInput').empty();
-    $('#employeeTitleInput').empty();
-    $('#annualSalaryInput').empty();
-}
+
 
 function readyNow(){
     $('#submitButton').on( 'click', newEmployeeInput);
-
 }
