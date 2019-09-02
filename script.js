@@ -25,6 +25,29 @@ function newEmployeeInput(){
       $('#annualSalaryInput').val('');
 }
 
+function newEmployeeOutput(){
+   let el = $('#employeesOutput');
+   el.empty();
+   el.append(`
+<tr>
+   <th>First Name</th>
+   <th>Last Name</th> 
+   <th>ID</th>
+   <th>Title</th>
+   <th>Annual Salary</th>
+   <th>Delete</th>
+</tr>`) 
+    for( i=0; i < newEmployees.length; i++){
+        el.append(`<tr>
+                    <td>${newEmployees[i].firstName}</td>
+                    <td>${newEmployees[i].lastName}</td> 
+                    <td>${newEmployees[i].employeeIdInput}</td>
+                    <td>${newEmployees[i].employeeTitle}</td>
+                    <td>${newEmployees[i].annualSalary}</td>
+                    <th id='deleteTable'>Delete</th>
+                </tr>`)
+    }
+}
 
 function readyNow(){
     $('#submitButton').on( 'click', newEmployeeInput);
