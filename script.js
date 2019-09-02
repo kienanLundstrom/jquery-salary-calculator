@@ -23,6 +23,7 @@ function newEmployeeInput(){
       $('#employeeIdInput').val('');
       $('#employeeTitleInput').val('');
       $('#annualSalaryInput').val('');
+      newEmployeeOutput();
 }
 
 function newEmployeeOutput(){
@@ -35,16 +36,14 @@ function newEmployeeOutput(){
    <th>ID</th>
    <th>Title</th>
    <th>Annual Salary</th>
-   <th>Delete</th>
 </tr>`) 
     for( i=0; i < newEmployees.length; i++){
         el.append(`<tr>
                     <td>${newEmployees[i].firstName}</td>
                     <td>${newEmployees[i].lastName}</td> 
                     <td>${newEmployees[i].employeeIdInput}</td>
-                    <td>${newEmployees[i].employeeTitle}</td>
+                    <td>${newEmployees[i].employeeTitleInput}</td>
                     <td>${newEmployees[i].annualSalary}</td>
-                    <th id='deleteTable'>Delete</th>
                 </tr>`)
     }
 }
