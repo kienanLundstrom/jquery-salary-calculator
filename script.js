@@ -28,6 +28,7 @@ function newEmployeeInput(){
 
 function newEmployeeOutput(){
    let el = $('#employeesOutput');
+   let totalAnnualSalary = 0;
    el.empty();
    el.append(`
 <tr>
@@ -41,11 +42,15 @@ function newEmployeeOutput(){
         el.append(`<tr>
                     <td>${newEmployees[i].firstName}</td>
                     <td>${newEmployees[i].lastName}</td> 
-                    <td>${newEmployees[i].employeeIdInput}</td>
-                    <td>${newEmployees[i].employeeTitleInput}</td>
+                    <td>${newEmployees[i].iD}</td>
+                    <td>${newEmployees[i].title}</td>
                     <td>${newEmployees[i].annualSalary}</td>
-                </tr>`)
-    }
+                </tr>`);
+        totalAnnualSalary += Number(newEmployees[i].annualSalary);
+    } 
+    let totalMonthlyOutput = $('#totalMonthlyOutput');
+    totalMonthlyOutput.empty();
+    totalMonthlyOutput.append('Total Monthly Output: ' + totalAnnualSalary/12 );
 }
 
 function readyNow(){
