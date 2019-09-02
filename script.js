@@ -1,6 +1,9 @@
 $(document).ready(readyNow);
 
+function newEmployeeInput(){
+    console.log ('click listner')
+}
 
 function readyNow(){
-    console.log('testing jquety')
+    $('#submitButton').on( 'click', newEmployeeInput);
 }
