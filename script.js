@@ -49,8 +49,12 @@ function newEmployeeOutput(){
         totalAnnualSalary += Number(newEmployees[i].annualSalary);
     } 
     let totalMonthlyOutput = $('#totalMonthlyOutput');
+    let totalMonthly = totalAnnualSalary/12 ;
     totalMonthlyOutput.empty();
     totalMonthlyOutput.append('Total Monthly Output: ' + totalAnnualSalary/12 );
+   if( totalMonthly > 20000){
+    totalMonthlyOutput.addClass('overTwentyThou');
+   }
 }
 
 function readyNow(){
