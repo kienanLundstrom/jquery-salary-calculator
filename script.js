@@ -37,6 +37,7 @@ function newEmployeeOutput(){
    <th>ID</th>
    <th>Title</th>
    <th>Annual Salary</th>
+   <th>Delete</th>
 </tr>`) 
     for( i=0; i < newEmployees.length; i++){
         el.append(`<tr>
@@ -45,6 +46,7 @@ function newEmployeeOutput(){
                     <td>${newEmployees[i].iD}</td>
                     <td>${newEmployees[i].title}</td>
                     <td>${newEmployees[i].annualSalary}</td>
+                    <td><button id='deleteMe'>Delete</button></td?
                 </tr>`);
         totalAnnualSalary += Number(newEmployees[i].annualSalary);
     } 
@@ -56,7 +58,11 @@ function newEmployeeOutput(){
     totalMonthlyOutput.addClass('overTwentyThou');
    }
 }
+function deleteMe(){
+    $( this ).parent().parent().remove();
+}
 
 function readyNow(){
     $('#submitButton').on( 'click', newEmployeeInput);
+    $('#newEmployeeIn').on( 'click', '.deleteMe', deleteMe)
 }
